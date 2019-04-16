@@ -13,3 +13,5 @@ html, body, #root, .Hooks {
 button {
   margin: 2vw;
 }
+
+/* had not set .Hooks at the top so full page was not turning black vs white */
