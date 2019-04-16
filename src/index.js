@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import "./index.css"
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+const Hooks = () => {
+    const [on, setOn] = useState(true);
+    const brightness = on ? "lit" : "dark";
+
+    return (
+        <div className={`Hooks ${brightness}`}>
+            <br />
+            <button onClick={() => setOn(true)}>On</button>
+            <button onClick={() => setOn(false)}>Off</button>
+            <br />
+        </div>
+    )
+};
+ReactDOM.render(<Hooks />, document.getElementById('root'));
